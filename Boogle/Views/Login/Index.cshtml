@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "_Header";
+}
+@model Boogle.Models.LoginModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col align-self-start"></div>
+
+            <div class="col align-self-center main-boogle float-left">
+                <p class="text1"><span style="color: #0984e3">B</span>OOGLE</p>
+                <p class="text2">Descripción Boogle</p>
+            </div>
+
+            <div class="col align-self-center animated fadeIn">
+                <form asp-controller="Login" asp-action="Ingresar" method="post">
+                    <div class="login-box">
+                        <h1>Login</h1>
+
+                        <div class="form-group text-left">
+
+                            <div class="textbox">
+                                <i class="fa fa-user"></i>
+                                <input asp-for="Usuario" type="text" placeholder="Usuario" autocomplete="off"/>
+                            </div>
+
+                            <div class="textbox">
+                                <i class="fa fa-lock"></i>
+                                <input asp-for="Password" type="password" placeholder="Contraseña" autocomplete="new-password"/>
+                            </div>
+
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <button class="btn-boogle btn btn-block mt-3 col" type="submit">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Ingresar
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @section Scripts {
+        @await Html.PartialAsync("_ValidationScriptsPartial")
+    }
+</body>
+</html>

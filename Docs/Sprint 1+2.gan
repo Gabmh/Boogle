@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Boogle, proyecto de software" company="" webLink="http://www.boogle.com" view-date="2019-08-19" view-index="0" gantt-divider-location="371" resource-divider-location="300" version="2.8.9" locale="fr">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="242" order="0"/>
+        <field id="tpd4" name="Date de début" width="65" order="1"/>
+        <field id="tpd5" name="Date de fin" width="60" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Formación del grupo" color="#8cb6ce" meeting="false" start="2019-08-22" duration="13" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="19" name="Descripción del proyecto" color="#8cb6ce" meeting="true" start="2019-09-09" duration="0" complete="0" thirdDate="2019-09-02" thirdDate-constraint="0" expand="true"/>
+        <task id="1" name="Organisación del proyecto" color="#8cb6ce" meeting="false" start="2019-09-10" duration="6" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="2" name="Planificación de las tareas" color="#8cb6ce" meeting="false" start="2019-09-10" duration="11" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="32" name="Preparación de la presentación" color="#8cb6ce" meeting="false" start="2019-09-24" duration="8" complete="0" thirdDate="2019-09-09" thirdDate-constraint="0" expand="true"/>
+        <task id="28" name="Presentación del proyecto" color="#8cb6ce" meeting="true" start="2019-10-03" duration="0" complete="0" thirdDate="2019-09-09" thirdDate-constraint="0" expand="true"/>
+        <task id="3" name="Diseño : pagina de conexión" color="#8cb6ce" meeting="false" start="2019-09-24" duration="23" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="5" name="Diseño : pagina &quot;Home&quot; + &quot;Search&quot; + &quot;Profile&quot;" color="#8cb6ce" meeting="false" start="2019-10-24" duration="7" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="6" name="Diseño : integración a la applicación" color="#8cb6ce" meeting="false" start="2019-10-28" duration="5" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="7" name="Backend : conexión" color="#8cb6ce" meeting="false" start="2019-10-28" duration="4" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="8" name="Backend : gestión de los formularios" color="#8cb6ce" meeting="false" start="2019-10-28" duration="5" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="9" name="Backend : gestión de las busquedas" color="#8cb6ce" meeting="false" start="2019-10-28" duration="5" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="44" name="BDD : reflexión" color="#8cb6ce" meeting="false" start="2019-09-24" duration="13" complete="0" thirdDate="2019-09-09" thirdDate-constraint="0" expand="true"/>
+        <task id="10" name="BDD : creación y integración" color="#8cb6ce" meeting="false" start="2019-10-28" duration="4" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+        <task id="11" name="Preparación a la presentación (2)" color="#8cb6ce" meeting="false" start="2019-10-28" duration="5" complete="0" thirdDate="2019-11-04" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Hernan" function="2" contacts="" phone=""/>
+        <resource id="1" name="Arielle" function="1" contacts="" phone=""/>
+        <resource id="2" name="Samy" function="1" contacts="" phone=""/>
+        <resource id="3" name="Jérémie" function="1" contacts="" phone=""/>
+        <resource id="4" name="Nicolas" function="1" contacts="" phone=""/>
+        <resource id="5" name="Bian" function="1" contacts="" phone=""/>
+        <resource id="6" name="Eduardo" function="1" contacts="" phone=""/>
+        <resource id="7" name="Gabriel" function="1" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="5" resource-id="1" function="1" responsible="false" load="100.0"/>
+        <allocation task-id="5" resource-id="2" function="1" responsible="true" load="100.0"/>
+        <allocation task-id="3" resource-id="5" function="1" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name="Desarrollador"/>
+        <role id="2" name="Jefe de proyecto"/>
+    </roles>
+</project>
