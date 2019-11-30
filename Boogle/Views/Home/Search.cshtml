@@ -13,40 +13,152 @@
 
     <style media="screen">
 
-        .dropdown.dropdown-lg .dropdown-menu {
-            margin-top: -1px;
-            padding: 6px 20px;
-        }
+  .dropdown.dropdown-lg .dropdown-menu {
+    margin-top: -1px;
+    padding: 6px 20px;
+  }
+  .input-group-btn .btn-group {
+    display: flex !important;
+  }
+  .btn-group .btn {
+    border-radius: 0;
+    margin-left: -1px;
+  }
+  .btn-group .btn:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .btn-group .form-horizontal .btn[type="submit"] {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-group .form-control:last-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
 
-        .input-group-btn .btn-group {
-            display: flex !important;
-        }
+   
 
-        .btn-group .btn {
-            border-radius: 0;
-            margin-left: -1px;
-        }
+  img {
+    border-radius: 5px;
+  }
 
-            .btn-group .btn:last-child {
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-            }
 
-        .btn-group .form-horizontal .btn[type="submit"] {
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-        }
+  /* Style the Image Used to Trigger the Modal */
+  #myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-        .form-horizontal .form-group {
-            margin-left: 0;
-            margin-right: 0;
-        }
+  #myImg:hover {opacity: 0.7;}
 
-        .form-group .form-control:last-child {
-            border-top-left-radius: 4px;
-            border-bottom-left-radius: 4px;
-        }
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 50px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+  }
+
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  .info {
+    text-align: left;
+    color: #ccc;
+    font-size: 1.4em;
+    padding-right: 60px;
+  }
+
+  .desc {
+    margin-top: 20px;
+    font-size: 0.8em;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
     </style>
+
+    <script>
+
+      window.onload = function(){
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+      }
+
+    </script>
 
 </head>
 
@@ -63,7 +175,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Home">
+                <a class="navbar-brand" href="index.html">
                     <span class="glyphicon glyphicon-fire"></span>
                     Boogle
                 </a>
@@ -75,7 +187,7 @@
                         <a href="/Home/Search">Search</a>
                     </li>
                     <li>
-                        <a href="#">My books</a>
+                        <a href="/Home/Books">My books</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -150,17 +262,40 @@
         <!-- Projects Row -->
         <div class="row text-center">
             <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/1" alt="animal 1">
-                </a>
-                <h3>
-                    <a href="#">Book 1</a>
-                </h3>
-                <p>Description of the book</p>
+                <!-- Trigger the Modal -->
+                <img id="myImg" class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 1">
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- The Close Button -->
+                    <span class="close">&times;</span>
+                    <div class="col-md-4">
+                        <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img01">
+                        <!-- Modal Caption (Image Text) -->
+                        <div id="caption"></div>
+                    </div>
+                    <div class="col-md-8 info">
+                        <ul>
+                            <li>Author : Henry van Dyke</li>
+                            <li>Publication date : 1926</li>
+                            <li>Genre : religious fiction</li>
+                            <li>Paperback : 372 pages</li>
+                            <li>Language : English</li>
+                        </ul>
+                        <div class="desc">
+                            Here are twelve tales that I have known for some time but never could find leisure to write. Now release from all sorts of official duty has set me free to work at whatever I like. As they are brought together it appears that these are all stories of deliverance from some kind of peril or perplexity or bondage. The book could have had as a motto: There is always a way out. But this might be too sweeping - misleading to light readers who look for a "happy ending" in tune with their own desires. Life is not made that way. The doors of deliverance are often different from what we expected. Sometimes one that looks dark leads into liberty. However that may be, I believe that in all God's world there is no hopeless imprisonment nor endless torment. So instead of a motto I have chosen for this book a symbol: The Golden Key. Take it and use it as you will.
+                        </div>
+                        <button type="button" class="btn btn-primary" style="margin-top:30px;">READ IT</button>
+                    </div>
+                </div>
+
+                <h3><a href="#">Book 1</a></h3>
             </div>
+
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/2" alt="animal 2">
+                    <img class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 2">
                 </a>
                 <h3>
                     <a href="#">Book 2</a>
@@ -169,7 +304,7 @@
             </div>
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/3" alt="animal 3">
+                    <img class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 3">
                 </a>
                 <h3>
                     <a href="#">Book 3</a>
@@ -182,7 +317,7 @@
         <div class="row text-center">
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/4" alt="animal 4">
+                    <img class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 4">
                 </a>
                 <h3>
                     <a href="#">Book 4</a>
@@ -191,7 +326,7 @@
             </div>
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/5" alt="animal 5">
+                    <img class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 5">
                 </a>
                 <h3>
                     <a href="#">Book 5</a>
@@ -200,7 +335,7 @@
             </div>
             <div class="col-md-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive center-block" src="http://lorempixel.com/250/350/animals/1" alt="animal 1">
+                    <img class="img-responsive center-block" src="~/img/book_test.jpg" alt="book 1">
                 </a>
                 <h3>
                     <a href="#">Book 6</a>

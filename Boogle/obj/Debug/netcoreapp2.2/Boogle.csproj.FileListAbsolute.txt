@@ -74,3 +74,4 @@ C:\Users\Gabriel\Documents\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.Views.pd
 C:\Users\Gabriel\Documents\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.dll
 C:\Users\Gabriel\Documents\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.pdb
 C:\Users\Gabriel\Documents\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.csproj.CopyComplete
+C:\Users\Gabriel\Documents\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Books.cshtml.g.cs

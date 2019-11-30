@@ -27,6 +27,12 @@ namespace Boogle.Controllers
             return View();
         }
 
+        public ActionResult Books()
+        {
+            ViewData["Nom"] = "Hekmil";
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public ActionResult Error()
         {
