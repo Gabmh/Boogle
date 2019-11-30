@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj": {}
+    "P:\\ESAIP\\Erasmus LV2\\UNAJ\\PDS\\Boogle\\Boogle\\Boogle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj": {
+    "P:\\ESAIP\\Erasmus LV2\\UNAJ\\PDS\\Boogle\\Boogle\\Boogle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj",
+        "projectUniqueName": "P:\\ESAIP\\Erasmus LV2\\UNAJ\\PDS\\Boogle\\Boogle\\Boogle.csproj",
         "projectName": "Boogle",
-        "projectPath": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj",
-        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\obj\\",
+        "projectPath": "P:\\ESAIP\\Erasmus LV2\\UNAJ\\PDS\\Boogle\\Boogle\\Boogle.csproj",
+        "packagesPath": "C:\\Users\\Hekmil\\.nuget\\packages\\",
+        "outputPath": "P:\\ESAIP\\Erasmus LV2\\UNAJ\\PDS\\Boogle\\Boogle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hekmil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

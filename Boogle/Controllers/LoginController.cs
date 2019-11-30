@@ -30,25 +30,26 @@ namespace Boogle.Controllers
         [AllowAnonymous]
         public ActionResult Ingresar([Bind("Usuario", "Password")] LoginModel login)
         {
-            /*connectionString();
+            connectionString();
             con.Open();
             com.Connection = con;
             com.CommandText = "select * from usuario where apodo='"+login.Usuario+"' and password='"+login.Password+"'";
             dr = com.ExecuteReader();
 
+
             if (dr.Read() && ModelState.IsValid)
             {
+                Debug.WriteLine(dr.Read());
                 con.Close();
-
-               */
                 return RedirectToAction("Index", "Home");
-                /*
-            } else
+                
+            } else 
             {
                 con.Close();
                 return RedirectToAction("Index");
-            }*/
+            }
         }
+
 
         void connectionString()
         {
@@ -59,6 +60,5 @@ namespace Boogle.Controllers
         {
             return View();
         }
-
     }
 }
