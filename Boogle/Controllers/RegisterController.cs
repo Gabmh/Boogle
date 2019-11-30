@@ -13,6 +13,11 @@ namespace Boogle.Controllers
 {
     public class RegisterController : Controller
     {
+
+        public ActionResult Login()
+        {
+            return View();
+        }
        
 
     }

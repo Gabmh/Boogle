@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "_Header";
 }
-@model Boogle.Models.LoginModel
+@model Boogle.Models.RegisterModel
 
 <!DOCTYPE html>
 
@@ -24,7 +24,7 @@
             <div class="col align-self-center animated fadeIn">
                 <form asp-controller="Login" asp-action="Ingresar" method="post">
                     <div class="login-box">
-                        <h1>Login</h1>
+                        <h1>Registrarse</h1>
 
                         <div class="form-group text-left">
 
@@ -38,6 +38,21 @@
                                 <input asp-for="Password" type="password" placeholder="Contraseña" autocomplete="new-password" />
                             </div>
 
+                            <div class="textbox">
+                                <i class="fa fa-lock"></i>
+                                <input asp-for="ConfirmPassword" type="password" placeholder="Confirmar la contraseña" autocomplete="new-password" />
+                            </div>
+
+                            <div class="textbox">
+                                <i class="fa fa-at"></i>
+                                <input asp-for="Email" type="email" placeholder="Correo electrónico" autocomplete="off" />
+                            </div>
+
+                            <div class="textbox">
+                                <i class="fa fa-calendar-alt"></i>
+                                <input asp-for="BornDate" type="date" placeholder="Fecha de nacimiento" autocomplete="off" />
+                            </div>
+
                             <div asp-validation-summary="All" class="text-danger"></div>
 
                             <button class="btn-boogle btn btn-block mt-3 col" type="submit">
@@ -45,10 +60,10 @@
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                                Ingresar
-                            </button>
-                            <button class="btn-boogle btn btn-block mt-3 col" type="button" onclick="location.href='@Url.Action("Register","Login")'">
                                 Registrarse
+                            </button>
+                            <button class="btn-boogle btn btn-block mt-3 col" type="button" onclick="location.href='@Url.Action("Login","Register")'">
+                                Login
                             </button>
                         </div>
 

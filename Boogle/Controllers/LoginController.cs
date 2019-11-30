@@ -56,7 +56,7 @@ namespace Boogle.Controllers
             con.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; database=Boogledb; integrated security= SSPI;";
         }
 
-        public ActionResult Registrar()
+        public ActionResult Register()
         {
             return View();
         }
