@@ -10,7 +10,7 @@ namespace Boogle.Controllers
 {
     public class ProfileController : Controller
     {
-        public ActionResult Show()
+        public IActionResult Show()
         {
             ViewData["Nom"] = "Hekmil";
             ViewData["Mail"] = "coucou@gmail.com";
@@ -19,7 +19,7 @@ namespace Boogle.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        public IActionResult Edit()
         {
             ViewData["Nom"] = "Hekmil";
 
@@ -41,7 +41,7 @@ namespace Boogle.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public ActionResult Error()
+        public IActionResult Error()
         {
             return View(new ErrorModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }

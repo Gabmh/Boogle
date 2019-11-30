@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "_Header";
 }
-@model Boogle.Models.LoginModel
+@model Boogle.Models.UserModel
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
 
                             <div class="textbox">
                                 <i class="fa fa-user"></i>
-                                <input asp-for="Usuario" type="text" placeholder="Usuario" autocomplete="off" />
+                                <input asp-for="Apodo" type="text" placeholder="Usuario" autocomplete="off" />
                             </div>
 
                             <div class="textbox">
@@ -47,8 +47,8 @@
                                 <span></span>
                                 Ingresar
                             </button>
-                            <button class="btn-boogle btn btn-block mt-3 col" type="button" onclick="location.href='@Url.Action("Register","Login")'">
-                                Registrarse
+                            <button type="button" onclick="location.href='@Url.Action("Create","Register")'">
+                                Registrar
                             </button>
                         </div>
 

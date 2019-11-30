@@ -10,25 +10,25 @@ namespace Boogle.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
             ViewData["Nom"] = "Hekmil";
             return View();
         }
 
-        public ActionResult Privacy()
+        public IActionResult Privacy()
         {
             return View();
         }
 
-        public ActionResult Search()
+        public IActionResult Search()
         {
             ViewData["Nom"] = "Hekmil";
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public ActionResult Error()
+        public IActionResult Error()
         {
             return View(new ErrorModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
