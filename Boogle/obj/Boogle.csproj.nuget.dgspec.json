@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj": {}
+    "C:\\Users\\Gabriel\\Documents\\Boogle\\Boogle\\Boogle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj": {
+    "C:\\Users\\Gabriel\\Documents\\Boogle\\Boogle\\Boogle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\Boogle\\Boogle\\Boogle.csproj",
         "projectName": "Boogle",
-        "projectPath": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\Boogle.csproj",
+        "projectPath": "C:\\Users\\Gabriel\\Documents\\Boogle\\Boogle\\Boogle.csproj",
         "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Desktop\\Boogle\\Boogle\\Boogle\\obj\\",
+        "outputPath": "C:\\Users\\Gabriel\\Documents\\Boogle\\Boogle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Aspose.Pdf": {
+              "target": "Package",
+              "version": "[19.11.0, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
