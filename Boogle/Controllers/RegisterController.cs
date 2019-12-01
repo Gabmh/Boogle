@@ -7,9 +7,9 @@ namespace Boogle.Controllers
 {
     public class RegisterController : Controller
     {
-        private readonly ApplicationUserModel _auc;
+        private readonly BoogledbContext _auc;
 
-        public RegisterController(ApplicationUserModel auc)
+        public RegisterController(BoogledbContext auc)
         {
             _auc = auc;
         }

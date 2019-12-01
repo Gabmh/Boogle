@@ -1,4 +1,5 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http;
+@{
     Layout = "_Main";
 }
 
@@ -6,118 +7,118 @@
 <!-- Template by Quackit.com -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-  <title>Welcome</title>
+    <title>Welcome</title>
 
-  <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
-  <link href="~/css/custom.css" rel="stylesheet">
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="~/css/custom.css" rel="stylesheet">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 
-  <style>
-  * {box-sizing:border-box}
+    <style>
+        * {
+            box-sizing: border-box
+        }
 
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    margin-top: 60px;
-    opacity: 0.8;
-  }
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            margin-top: 60px;
+            opacity: 0.8;
+        }
 
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
 
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
 
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
 
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
 
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-style: bold;
-    font-size: 80px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 80px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-  .qu {
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 60px;
-  }
+        .qu {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 60px;
+        }
 
-  button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: 2px solid white;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    border-radius: 25px;
-    font-size: 20px;
-    padding: 10px;
-    font-style: normal;
-  }
+        button {
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: 2px solid white;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            border-radius: 25px;
+            font-size: 20px;
+            padding: 10px;
+            font-style: normal;
+        }
 
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-  .active, .dot:hover {
-    background-color: #717171;
-  }
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+    </style>
 
-  </style>
-
-  <script>
+    <script>
   window.onload = function(){
     var slideIndex = 0;
     showSlides();
@@ -135,111 +136,87 @@
 
     }
   }
-  </script>
-
+    </script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <!-- Logo and responsive toggle -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-          <span class="glyphicon glyphicon-fire"></span>
-          Boogle
-        </a>
-      </div>
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li>
-            <a asp-area="" asp-controller="Home" asp-action="Search">Search</a>
-          </li>
-          <li>
-            <a asp-area="" asp-controller="Home" asp-action="Books">My books</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a asp-area="" asp-controller="Profile" asp-action="Show">My name</a>
-          </li>
-          <li>
-            <img src="~/img/user_icon.png" class="img-responsive" alt="user icon" style="height: 30px; margin-top: 10px;">
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
-
-  <!-- Content -->
-  <div class="container">
-
-    <!-- Project row -->
-    <div class="row">
-      <!-- Slideshow container -->
-      <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides">
-          <img src="img/wide.jpg" style="width:100%">
-          <div class="text">
-            Welcome !
-            <div class="qu">
-              What are going to read today ?
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="glyphicon glyphicon-fire"></span>
+                    Boogle
+                </a>
             </div>
-            <button>Resume last reading</button>
-          </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a asp-area="" asp-controller="Book" asp-action="Index">Search</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Books">My books</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a asp-area="" asp-controller="Profile" asp-action="Show">@Context.Session.GetString("user")</a>
+                    </li>
+                    <li>
+                        <img src="~/img/user_icon.png" class="img-responsive" alt="user icon" style="height: 30px; margin-top: 10px;">
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
+    </nav>
 
-        <div class="mySlides">
-          <img src="img/wide.png" style="width:100%">
-          <div class="text">Caption Two</div>
+    <!-- Content -->
+    <div class="container">
+
+        <!-- Project row -->
+        <div class="row">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides">
+                    <img src="~/img/wide.jpg" style="width:100%">
+                    <div class="text">
+                        Welcome !
+                        <div class="qu">
+                            What are going to read today ?
+                        </div>
+                        <button>Resume last reading</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="mySlides">
-          <img src="img/wide.png" style="width:100%">
-          <div class="text">Caption Three</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br>
-
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-    </div>
-  </div>
-  <!-- /.row -->
-
-  <hr>
-
-  <!-- Footer -->
-  <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>Copyright &copy; BOOGLE 2019</p>
-      </div>
     </div>
     <!-- /.row -->
-  </footer>
 
-</div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; BOOGLE 2019</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
 </body>
 
 </html>

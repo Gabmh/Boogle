@@ -57,7 +57,6 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.Razor
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Search.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Edit.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Show.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Register\Create.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
@@ -76,3 +75,9 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.dll
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.pdb
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.csproj.CopyComplete
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Books.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Create.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Delete.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Details.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Edit.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Index.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Search.cshtml.g.cs

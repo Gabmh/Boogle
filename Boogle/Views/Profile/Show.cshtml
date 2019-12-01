@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Http;
+@model Boogle.Models.UserModel
+
+@{
     Layout = "_Main";
 }
 
@@ -55,7 +58,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a asp-area="" asp-controller="" asp-action="Show">My name</a>
+                        <a asp-area="" asp-controller="" asp-action="Show">@Context.Session.GetString("user")</a>
                     </li>
                     <li>
                         <img src="~/img/user_icon.png" class="img-responsive" alt="user icon" style="height: 30px; margin-top: 10px;">
@@ -83,7 +86,6 @@
             <div class="col-md-1 portfolio-item"></div>
             <div class="col-md-1 portfolio-item"></div>
             <div class="col-md-1 portfolio-item"></div>
-            <a asp-area="" asp-controller="Profile" asp-action="Edit">Modify</a>
             <button type="button" class="btn btn-info" onclick="window.location.href='@Url.Action("Edit","Profile")'"><span class="glyphicon glyphicon-pencil"></span></button>
         </div>
 
@@ -91,20 +93,24 @@
         <div class="row">
 
             <div class="col-md-4 portfolio-item">
-                <img class="img-responsive" src="img/avatar.png" alt="avatar picture">
+                <img class="img-responsive" src="~/img/avatar.png" alt="avatar picture">
             </div>
             <div class="col-md-8 portfolio-item">
-                <h3 class="text">Pseudo here</h3>
+                <h3 class="text">@Model.Apodo</h3>
 
                 <table class="table table-bordered" style="margin-top: 50px;">
                     <tbody>
                         <tr>
-                            <th scope="row">Mail</th>
-                            <td>coucou@gmail.com</td>
+                            <th scope="row">Correo</th>
+                            <td>@Model.Mail</td>
                         </tr>
                         <tr>
-                            <th scope="row">Date of Birth</th>
-                            <td>20/20/20</td>
+                            <th scope="row">Fecha de nacimiento</th>
+                            <td>@Model.Fecha_nac</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fecha de creación</th>
+                            <td>@Model.Fecha_alta</td>
                         </tr>
                     </tbody>
                 </table>

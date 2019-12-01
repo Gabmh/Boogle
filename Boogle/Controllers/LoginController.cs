@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 using System.Diagnostics;
-
+using Microsoft.AspNetCore.Http;
 
 namespace Boogle.Controllers
 {
@@ -17,7 +17,6 @@ namespace Boogle.Controllers
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
             ViewData["title"] = "Boogle";
@@ -27,7 +26,7 @@ namespace Boogle.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Ingresar([Bind("Apodo", "Password")] UserModel login)
+        public IActionResult Ingresar([Bind("Usuario_id","Apodo", "Password")] UserModel login)
         {
             connectionString();
             con.Open();
@@ -37,6 +36,15 @@ namespace Boogle.Controllers
 
             if (dr.Read())
             {
+                HttpContext.Session.SetString("user", login.Apodo);
+                con.Close();
+                con.Open();
+                com.CommandText = "select usuario_id from usuario where apodo='" + login.Apodo +"'";
+                dr = com.ExecuteReader();
+                dr.Read();
+                int id = System.Convert.ToInt32(dr[0].ToString());
+
+                HttpContext.Session.SetInt32("id", id);
                 con.Close();
                 return RedirectToAction("Index", "Home");
             } else 
@@ -51,9 +59,12 @@ namespace Boogle.Controllers
             con.ConnectionString = "data source=(localdb)\\MSSQLLocalDB; database=Boogledb; integrated security= SSPI;";
         }
 
-        public IActionResult Create()
+        [Route("logout")]
+        [HttpGet]
+        public IActionResult Logout()
         {
-            return View();
+            HttpContext.Session.Remove("user");
+            return RedirectToAction("Index");
         }
     }
 }
