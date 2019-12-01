@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Boogle.Models
 {
@@ -12,6 +8,7 @@ namespace Boogle.Models
         public const string INVALIDO = "Usuario y/o contraseña inválido";
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Usuario_Id { get; set; }
 
         [Required(ErrorMessage = "El usuario es obligatorio")]

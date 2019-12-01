@@ -36,8 +36,8 @@ C:\Users\Gabriel\Desktop\Boogle\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\View
 C:\Users\Gabriel\Desktop\Boogle\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Search.cshtml.g.cs
 C:\Users\Gabriel\Desktop\Boogle\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Edit.cshtml.g.cs
 C:\Users\Gabriel\Desktop\Boogle\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Show.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\appsettings.json
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\appsettings.Development.json
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\appsettings.json
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\Boogle.deps.json
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\bin\Debug\netcoreapp2.2\Boogle.runtimeconfig.json
@@ -60,10 +60,12 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Edit.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Profile\Show.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Register\Create.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Header.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout2.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Main.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
@@ -74,4 +76,3 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.Views
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.dll
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.pdb
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.csproj.CopyComplete
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Register\Create.cshtml.g.cs

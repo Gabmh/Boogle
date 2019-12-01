@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Boogle.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
-using System.Diagnostics;
-using Microsoft.EntityFrameworkCore;
 
 namespace Boogle.Controllers
 {
@@ -34,11 +27,11 @@ namespace Boogle.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(UserModel user)
         {
-            user.Usuario_Id = 1;
-            user.rol = 1;
-            user.Fecha_alta = "10/10/1000";
+            DateTime today = DateTime.Today;
+
+            user.rol = 0;
+            user.Fecha_alta = today.ToString().Split(" ")[0];
             _auc.Add(user);
-            _auc.SaveChanges();
             ViewBag.message = "User created: " + user.Apodo;
 
             return View();
