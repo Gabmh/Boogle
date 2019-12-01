@@ -24,7 +24,6 @@ namespace Boogle.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(UserModel user)
         {
             DateTime today = DateTime.Today;
