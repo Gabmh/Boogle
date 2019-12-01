@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Boogle.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -24,6 +25,7 @@ namespace Boogle.Controllers
         }
 
         [HttpPost]
+        [AutoValidateAntiforgeryToken]
         public IActionResult Create(UserModel user)
         {
             DateTime today = DateTime.Today;
@@ -31,9 +33,9 @@ namespace Boogle.Controllers
             user.rol = 0;
             user.Fecha_alta = today.ToString().Split(" ")[0];
             _auc.Add(user);
-            ViewBag.message = "User created: " + user.Apodo;
+            _auc.SaveChanges();
 
-            return View();
+            return View("~/Views/Login/Index.cshtml");
         }
     }
 }

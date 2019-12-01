@@ -3,7 +3,7 @@
 
 CREATE TABLE [usuario]
 (
- [usuario_id] int NOT NULL ,
+ [usuario_id] INT          IDENTITY (1, 1) NOT NULL,
  [apodo]      varchar(50) NOT NULL ,
  [password]   varchar(50) NOT NULL ,
  [confirmpassword]   varchar(50) NOT NULL ,

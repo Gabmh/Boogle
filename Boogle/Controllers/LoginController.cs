@@ -27,7 +27,7 @@ namespace Boogle.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult Ingresar([Bind("Usuario", "Password")] UserModel login)
+        public IActionResult Ingresar([Bind("Apodo", "Password")] UserModel login)
         {
             connectionString();
             con.Open();
@@ -35,7 +35,7 @@ namespace Boogle.Controllers
             com.CommandText = "select * from usuario where apodo='"+login.Apodo+"' and password='"+login.Password+"'";
             dr = com.ExecuteReader();
 
-            if (dr.Read() && ModelState.IsValid)
+            if (dr.Read())
             {
                 con.Close();
                 return RedirectToAction("Index", "Home");

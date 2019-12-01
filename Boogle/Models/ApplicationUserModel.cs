@@ -9,6 +9,8 @@ namespace Boogle.Models
 
         }
 
+
+
         public DbSet<UserModel> usuario { get; set; }
     }
 }
