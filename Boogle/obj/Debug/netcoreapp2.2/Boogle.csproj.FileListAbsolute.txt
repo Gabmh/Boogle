@@ -54,7 +54,6 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.Assem
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.TagHelpers.input.cache
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.TagHelpers.output.cache
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.RazorCoreGenerate.cache
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Search.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Login\Index.cshtml.g.cs
@@ -76,3 +75,4 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.Views
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.dll
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.pdb
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.csproj.CopyComplete
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Books.cshtml.g.cs
