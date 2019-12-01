@@ -21,6 +21,11 @@ namespace Boogle.Controllers
             return View();
         }
 
+        public IActionResult Books()
+        {
+            return View();
+        }
+
         public IActionResult Search()
         {
             ViewData["Nom"] = "Hekmil";

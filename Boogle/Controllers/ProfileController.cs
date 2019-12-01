@@ -1,22 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Boogle.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Boogle.Controllers
 {
     public class ProfileController : Controller
     {
-        public IActionResult Show()
-        {
-            ViewData["Nom"] = "Hekmil";
-            ViewData["Mail"] = "coucou@gmail.com";
-            ViewData["Birth"] = "15/10/95";
+        private readonly BoogledbContext _context;
 
-            return View();
+        public ProfileController(BoogledbContext context)
+        {
+            _context = context;
+        }
+
+
+        public async Task<IActionResult> Show(int? id)
+        {
+            id = HttpContext.Session.GetInt32("id");
+
+            var userModel = _context.Usuario.FirstOrDefaultAsync(m => m.Usuario_Id == id);
+
+
+            List<UserModel> list = await _context.Usuario.ToListAsync();
+            int i = 0;
+            foreach (UserModel u in list)
+            {
+                int n = 0;
+                if (u.Usuario_Id == 4)
+                {
+                    i = n;
+                }
+                n++;
+            }
+
+            return View(list[i]);
+            
         }
 
         public IActionResult Edit()

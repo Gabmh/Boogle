@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Boogle.Models
@@ -6,6 +7,11 @@ namespace Boogle.Models
     public class UserModel
     {
         public const string INVALIDO = "Usuario y/o contraseña inválido";
+
+        public UserModel()
+        {
+            UsuarioLibro = new HashSet<UserBook>();
+        }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -37,5 +43,8 @@ namespace Boogle.Models
 
         [DataType(DataType.Date)]
         public string Fecha_alta { get; set; }
+
+        public virtual ICollection<UserBook> UsuarioLibro { get; set; }
+
     }
 }

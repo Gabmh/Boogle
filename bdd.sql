@@ -3,7 +3,7 @@
 
 CREATE TABLE [usuario]
 (
- [usuario_id] INT          IDENTITY (1, 1) NOT NULL,
+ [usuario_id] INT IDENTITY NOT NULL,
  [apodo]      varchar(50) NOT NULL ,
  [password]   varchar(50) NOT NULL ,
  [confirmpassword]   varchar(50) NOT NULL ,
@@ -21,10 +21,10 @@ GO
 
 CREATE TABLE [autor]
 (
- [id_autor]  int NOT NULL ,
+ [id_autor]  int IDENTITY NOT NULL ,
  [nombre]    varchar(50) NOT NULL ,
  [apellido]  varchar(50) NOT NULL ,
- [fecha_nac] date NOT NULL ,
+ [fecha_nac] varchar(50) NOT NULL ,
 
 
  CONSTRAINT [PK_autor] PRIMARY KEY CLUSTERED ([id_autor] ASC)
@@ -35,7 +35,7 @@ GO
 
 CREATE TABLE [editor]
 (
- [id_editor] int NOT NULL ,
+ [id_editor] int IDENTITY NOT NULL ,
  [nombre]    varchar(50) NOT NULL ,
  [pais]      varchar(50) NOT NULL ,
  [url]       varchar(100) NOT NULL ,
@@ -49,14 +49,12 @@ GO
 
 CREATE TABLE [libro]
 (
- [libro_id]  int NOT NULL ,
+ [libro_id]  int IDENTITY NOT NULL ,
  [titulo]    varchar(50) NOT NULL ,
  [idioma]    varchar(50) NOT NULL ,
+ [desc] 	 varchar(1000) NOT NULL,
  [cant_pag]  smallint NOT NULL ,
  [generos]   varchar(500) NOT NULL ,
- [isbn]      varchar(50) NOT NULL ,
- [url]       varchar(500) NOT NULL ,
- [imagen]    varbinary(max) NOT NULL ,
  [eliminado] tinyint NOT NULL ,
  [id_autor]  int NOT NULL ,
  [id_editor] int NOT NULL ,
