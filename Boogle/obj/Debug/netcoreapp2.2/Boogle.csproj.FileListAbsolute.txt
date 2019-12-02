@@ -75,9 +75,6 @@ P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.dll
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.pdb
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Boogle.csproj.CopyComplete
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Home\Books.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Create.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Delete.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Details.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Edit.cshtml.g.cs
 P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Index.cshtml.g.cs
-P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Book\Search.cshtml.g.cs
+P:\ESAIP\Erasmus LV2\UNAJ\PDS\Boogle\Boogle\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout3.cshtml.g.cs

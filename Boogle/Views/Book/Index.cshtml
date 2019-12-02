@@ -1,17 +1,13 @@
 ﻿@model IEnumerable<Boogle.Models.BookModel>
-@{
-    Layout = "_Main";
-}
 
 @{
     ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+
 }
 
 <h1>Index</h1>
 
-<!--<p>
-    <a asp-action="Create">Create New</a>
-</p>-->
 <table class="table">
     <thead>
         <tr>
@@ -20,9 +16,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Idioma)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desc)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Cant_Pag)
@@ -43,39 +36,39 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+
+        @if (Model != null)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Titulo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Idioma)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Cant_Pag)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Generos)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Eliminado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id_AutorNavigation.Id_Autor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id_EditorNavigation.Id_Editor)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Libro_Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Libro_Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Libro_Id">Delete</a>
-                </td>
-            </tr>
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Idioma)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cant_Pag)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Generos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Eliminado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_AutorNavigation.Id_Autor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_EditorNavigation.Id_Editor)
+                    </td>
+                    <td>
+                        <a asp-action="Download">Download</a> |
+                        <a asp-action="Details" asp-route-id="@item.Libro_Id">Details</a> |
+                    </td>
+                </tr>
+            }
         }
-    </tbody>
+        </tbody>
 </table>

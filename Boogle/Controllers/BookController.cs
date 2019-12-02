@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Boogle.Models;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Boogle.Controllers
 {
@@ -19,10 +22,16 @@ namespace Boogle.Controllers
         }
 
         // GET: Book
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string name)
         {
-            var boogledbContext = _context.Libro.Include(b => b.Id_AutorNavigation).Include(b => b.Id_EditorNavigation);
-            return View(await boogledbContext.ToListAsync());
+            if (name == "semiosis")
+            {
+                var boogledbContext = _context.Libro.Include(b => b.Id_AutorNavigation).Include(b => b.Id_EditorNavigation);
+                return View(await boogledbContext.ToListAsync());
+            }
+
+            return View();
+           
         }
 
         // GET: Book/Details/5
@@ -45,117 +54,47 @@ namespace Boogle.Controllers
             return View(bookModel);
         }
 
-        // GET: Book/Create
-        public IActionResult Create()
+
+        public async Task<IActionResult> Download(string filename)
         {
-            ViewData["IdAutor"] = new SelectList(_context.Autor, "IdAutor", "IdAutor");
-            ViewData["IdEditor"] = new SelectList(_context.Editor, "IdEditor", "IdEditor");
-            return View();
+            filename = "Semiosis";
+            var path = Path.Combine(Directory.GetCurrentDirectory(),
+                           "wwwroot", "book/pdf/"+filename+".pdf");
+
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, GetContentType(path), Path.GetFileName(path));
         }
 
-        // POST: Book/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("LibroId,Titulo,Idioma,CantPag,Generos,Eliminado,IdAutor,IdEditor")] BookModel bookModel)
+        private string GetContentType(string path)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(bookModel);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdAutor"] = new SelectList(_context.Autor, "IdAutor", "IdAutor", bookModel.Id_Autor);
-            ViewData["IdEditor"] = new SelectList(_context.Editor, "IdEditor", "IdEditor", bookModel.Id_Editor);
-            return View(bookModel);
+            var types = GetMimeTypes();
+            var ext = Path.GetExtension(path).ToLowerInvariant();
+            return types[ext];
         }
 
-        // GET: Book/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        private Dictionary<string, string> GetMimeTypes()
         {
-            if (id == null)
+            return new Dictionary<string, string>
             {
-                return NotFound();
-            }
-
-            var bookModel = await _context.Libro.FindAsync(id);
-            if (bookModel == null)
-            {
-                return NotFound();
-            }
-            ViewData["IdAutor"] = new SelectList(_context.Autor, "IdAutor", "IdAutor", bookModel.Id_Autor);
-            ViewData["IdEditor"] = new SelectList(_context.Editor, "IdEditor", "IdEditor", bookModel.Id_Editor);
-            return View(bookModel);
+                {".txt", "text/plain"},
+                {".pdf", "application/pdf"},
+                {".doc", "application/vnd.ms-word"},
+                {".docx", "application/vnd.ms-word"},
+                {".xls", "application/vnd.ms-excel"}, 
+                {".png", "image/png"},
+                {".jpg", "image/jpeg"},
+                {".jpeg", "image/jpeg"},
+                {".gif", "image/gif"},
+                {".csv", "text/csv"}
+            };
         }
 
-        // POST: Book/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("LibroId,Titulo,Idioma,CantPag,Generos,Eliminado,IdAutor,IdEditor")] BookModel bookModel)
-        {
-            if (id != bookModel.Libro_Id)
-            {
-                return NotFound();
-            }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(bookModel);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!BookModelExists(bookModel.Libro_Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdAutor"] = new SelectList(_context.Autor, "IdAutor", "IdAutor", bookModel.Id_Autor);
-            ViewData["IdEditor"] = new SelectList(_context.Editor, "IdEditor", "IdEditor", bookModel.Id_Editor);
-            return View(bookModel);
-        }
-
-        // GET: Book/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var bookModel = await _context.Libro
-                .Include(b => b.Id_AutorNavigation)
-                .Include(b => b.Id_EditorNavigation)
-                .FirstOrDefaultAsync(m => m.Libro_Id == id);
-            if (bookModel == null)
-            {
-                return NotFound();
-            }
-
-            return View(bookModel);
-        }
-
-        // POST: Book/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var bookModel = await _context.Libro.FindAsync(id);
-            _context.Libro.Remove(bookModel);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
 
         private bool BookModelExists(int id)
         {
